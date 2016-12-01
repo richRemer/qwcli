@@ -1,0 +1,8 @@
+{
+  "name": "qwcli",
+  "version": "0.0.1",
+  "description": "command-line interface library",
+  "main": "qwcli.js",
+  "author": "Richard Remer <reanjr@gmail.com>",
+  "license": "MIT"
+}
