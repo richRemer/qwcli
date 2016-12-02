@@ -1,5 +1,29 @@
 Example
 =======
+```js
+const qwcli = require("qwcli");
+const CLI = qwcli.Interface;
+const assign = Object.assign;
+
+var cli = qwcli(),
+    opts = {cmd: undefined, verbosity: 0, logfile: "", debug: false},
+    parser, args;
+
+cli.bind(CLI.head, (node, script) => assign(opts, {node:node, script:script}));
+cli.bind(["-v", "--verbose"], () => opts.verbosity++);
+cli.bind(["-L", "--log"], file => opts.logfile = file);
+cli.bind("--debug", () => opts.debug = true);
+
+parse = cli.parser();
+args = parse(["/bin/node", "script.js", "-v", "--log", "my.log");
+assert(opts.node === "/bin/node");
+assert(opts.script === "script.js");
+assert(opts.verbosity === 1);
+assert(opts.logfile === "my.log");
+```
+
+Old Notes
+=========
 const qwcli = require("qwcli");
 const first = qwcli.first;
 
