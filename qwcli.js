@@ -7,4 +7,3 @@ module.exports.stateful = require("./lib/sentinel").stateful;
 module.exports.State = require("./lib/state");
 module.exports.ParseError = require("./lib/parse-error");
 module.exports.Interface = require("./lib/interface");
-module.exports.handler = require("./lib/handler");
