@@ -1,8 +1,13 @@
 {
   "name": "qwcli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "command-line interface library",
   "main": "qwcli.js",
   "author": "Richard Remer <reanjr@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^5.0.4",
+    "sinon": "^4.4.6"
+  }
 }
